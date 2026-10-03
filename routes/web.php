@@ -10,4 +10,6 @@ Route::get('/', function () {
 
 Route::controller(JapanController::class)->group(function(){
     Route::get('/japan', 'index');
+    Route::get('/japan/create', 'create');
+    Route::post('/japan', 'store');
 });
