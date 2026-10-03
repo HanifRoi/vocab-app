@@ -12,4 +12,9 @@ class JapanController extends Controller
         $dataJapan = Japan::all();
         return view('japan.index', compact('dataJapan'));
     }
+
+    public function create()
+    {
+        return view('japan.create');
+    }
 }
