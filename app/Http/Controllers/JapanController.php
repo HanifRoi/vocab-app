@@ -47,4 +47,28 @@ class JapanController extends Controller
         $data = Japan::findOrFail($id);
         return view('japan.edit', compact('data'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $data = Japan::findOrFail($id);
+        $request->validate([
+            'hork' => 'required|string',
+            'kanji' => 'string|nullable',
+            'arti' => 'required|string|min:3',
+            'contoh' => 'required|string|min:3'
+        ],[
+            'hork.required' => 'Wajib diisi mas',
+            'arti.min' => 'Minimal 3 Karakter mas',
+            'contoh.required' => 'Wajib diisi mas',
+            'contoh.min' => 'Minimal 3 Karakter mas'
+        ]);
+
+        $data->hork = $request->hork;
+        $data->kanji = $request->kanji;
+        $data->arti = $request->arti;
+        $data->contoh = $request->contoh;
+
+        $data->save();
+        return redirect('/japan')->with('sukses', 'Data berhasil diupdate');
+    }
 }
