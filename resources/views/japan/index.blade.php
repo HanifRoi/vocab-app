@@ -4,7 +4,7 @@
     </head>
     <body>
         <h2>Vocabulary Japan</h2>
-       <table>
+       <table border="1">
         <tr>
             <th>No</th>
             <th>H/K</th>
