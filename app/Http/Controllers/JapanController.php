@@ -41,4 +41,10 @@ class JapanController extends Controller
         $data->save();
         return redirect('/japan')->with('sukses', 'Data berhasil ditambahkan');
     }
+
+    public function edit($id)
+    {
+        $data = Japan::findOrFail($id);
+        return view('japan.edit', compact('data'));
+    }
 }
