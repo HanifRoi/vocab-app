@@ -18,13 +18,11 @@
         </tr>
         @foreach ($dataJapan as $item)
         <tr>
-            
             <td>{{ $loop->iteration }}</td>
             <td>{{ $item->hork }}</td>
             <td>{{ $item->kanji }}</td>
             <td>{{ $item->arti }}</td>
             <td>{{ $item->contoh }}</td>
-            
         </tr>
         @endforeach
        </table>
