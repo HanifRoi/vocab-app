@@ -23,7 +23,7 @@ class JapanController extends Controller
         $data = new Japan;
         $request->validate([
             'hork' => 'required|string',
-            'kanji' => 'string',
+            'kanji' => 'string|nullable',
             'arti' => 'required|string|min:3',
             'contoh' => 'required|string|min:3'
         ],[
@@ -33,10 +33,10 @@ class JapanController extends Controller
             'contoh.min' => 'Minimal 3 Karakter mas'
         ]);
 
-        $data->$request = $request->hork;
-        $data->$request = $request->kanji;
-        $data->$request = $request->arti;
-        $data->$request = $request->contoh;
+        $data->hork = $request->hork;
+        $data->kanji = $request->kanji;
+        $data->arti = $request->arti;
+        $data->contoh = $request->contoh;
 
         $data->save();
         return redirect('/japan')->with('sukses', 'Data berhasil ditambahkan');

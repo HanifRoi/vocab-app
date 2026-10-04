@@ -9,4 +9,10 @@ class Japan extends Model
 {
     use HasFactory;
     protected $table = 'japan';
+     protected $fillable = [
+        'hork',
+        'kanji',
+        'arti',
+        'contoh',
+    ];
 }

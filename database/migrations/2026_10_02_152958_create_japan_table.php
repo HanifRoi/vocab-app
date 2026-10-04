@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('japan', function (Blueprint $table) {
             $table->id();
-            $table->string('hork');
-            $table->string('kanji');
+            $table->text('hork');
+            $table->text('kanji')->nullable();
             $table->string('arti');
-            $table->string('contoh');
+            $table->text('contoh');
             $table->timestamps();
         });
     }
