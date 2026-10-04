@@ -17,4 +17,28 @@ class JapanController extends Controller
     {
         return view('japan.create');
     }
+
+    public function store(Request $request)
+    {
+        $data = new Japan;
+        $request->validate([
+            'hork' => 'required|string',
+            'kanji' => 'string',
+            'arti' => 'required|string|min:3',
+            'contoh' => 'required|string|min:3'
+        ],[
+            'hork.required' => 'Wajib diisi mas',
+            'arti.min' => 'Minimal 3 Karakter mas',
+            'contoh.required' => 'Wajib diisi mas',
+            'contoh.min' => 'Minimal 3 Karakter mas'
+        ]);
+
+        $data->$request = $request->hork;
+        $data->$request = $request->kanji;
+        $data->$request = $request->arti;
+        $data->$request = $request->contoh;
+
+        $data->save();
+        return redirect('/japan')->with('sukses', 'Data berhasil ditambahkan');
+    }
 }
