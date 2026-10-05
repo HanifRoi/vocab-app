@@ -8,8 +8,9 @@
 
     <h2>Vocabulary Japan</h2>
     <a href="/japan/create"><button>Tambah Data</button></a>
-    <table border="1">
-    <tr>
+<table border="1">
+<thead>
+      <tr>
         <th>No</th>
         <th>H/K</th>
         <th>Kanji</th>
@@ -17,9 +18,11 @@
         <th>Contoh Penggunaan</th>
         <th>Aksi</th>
     </tr>
-    @foreach ($dataJapan as $item)
+</thead>
+<tbody>
+    @forelse ($dataJapan as $index => $item)
     <tr>
-        <td>{{ $loop->iteration }}</td>
+        <td>{{ $dataJapan->firstItem() + $index }}</td>
         <td>{{ $item->hork }}</td>
         <td>{{ $item->kanji }}</td>
         <td>{{ $item->arti }}</td>
@@ -33,6 +36,14 @@
             </form>
         </td>
     </tr>
-    @endforeach
-    </table>
+    @empty
+        <tr>
+            <td colspan="6" style="text-align: center">Data tidak ditemukan</td>
+        </tr>
+    @endforelse
+</tbody>
+</table>
+    <div style="margin-top: 15px">
+        {{ $dataJapan->links() }}
+    </div>
 @endsection
