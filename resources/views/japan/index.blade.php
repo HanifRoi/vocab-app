@@ -25,7 +25,7 @@
             <td>{{ $item->arti }}</td>
             <td>{{ $item->contoh }}</td>
             <td>
-                <a href="/japan/{{ $dataJapan->id }}/edit"><button>Edit</button></a>
+                <a href="/japan/{{ $item->id }}/edit"><button>Edit</button></a>
             </td>
         </tr>
         @endforeach

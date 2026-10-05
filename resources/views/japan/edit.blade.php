@@ -7,6 +7,8 @@
 </head>
 <body>
     <form action="/japan/{{ $data->id }}" method="POST">
+        @csrf
+        @method('PUT')
         <div>
             <label for="">H/K</label><br>
             <input type="text" name="hork" value="{{ $data->hork }}">
