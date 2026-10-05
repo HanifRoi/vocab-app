@@ -15,6 +15,7 @@
             <th>Kanji</th>
             <th>Arti</th>
             <th>Contoh Penggunaan</th>
+            <th>Aksi</th>
         </tr>
         @foreach ($dataJapan as $item)
         <tr>
@@ -23,6 +24,9 @@
             <td>{{ $item->kanji }}</td>
             <td>{{ $item->arti }}</td>
             <td>{{ $item->contoh }}</td>
+            <td>
+                <a href="/japan/{{ $dataJapan->id }}/edit"><button>Edit</button></a>
+            </td>
         </tr>
         @endforeach
        </table>
