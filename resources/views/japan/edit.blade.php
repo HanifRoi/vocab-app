@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@extends('layouts.app')
+@section('app')
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit data Vocab Japan</title>
-</head>
-<body>
+
     <form action="/japan/{{ $data->id }}" method="POST">
         @csrf
         @method('PUT')
@@ -31,5 +31,4 @@
         <br>
         <button type="submit">Update</button>
     </form>
-</body>
-</html>
+@endsection
