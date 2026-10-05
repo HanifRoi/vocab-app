@@ -9,7 +9,8 @@
     <h2>Vocabulary Japan</h2>
     <a href="/japan/create"><button>Tambah Data</button></a>
     <form action="/japan" method="GET">
-        <input type="text" placeholder="Cari..." value="{{ $cari }}">
+        <input type="text" name="cari" placeholder="Cari..." value="{{ $cari }}">
+        <button type="submit">Cari</button>
         @if ($cari)
             <a href="/japan"><button type="button">Reset</button></a>
         @endif

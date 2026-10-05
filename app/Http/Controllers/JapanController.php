@@ -17,7 +17,7 @@ class JapanController extends Controller
                         ->orWhere('arti', 'like', '%' . $cari . '%')
                         ->orWhere('contoh', 'like', '%' . $cari . '%');
         })->paginate(1)->appends($request->all());
-        return view('japan.index', compact('dataJapan'));
+        return view('japan.index', compact('dataJapan', 'cari'));
     }
 
     public function create()
