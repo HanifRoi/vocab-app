@@ -71,4 +71,12 @@ class JapanController extends Controller
         $data->save();
         return redirect('/japan')->with('sukses', 'Data berhasil diupdate');
     }
+
+    public function destroy($id)
+    {
+        $data = Japan::findOrFail($id);
+        $data->delete();
+
+        return redirect('/japan')->with('sukses', 'Data berhasil dihapus');
+    }
 }
