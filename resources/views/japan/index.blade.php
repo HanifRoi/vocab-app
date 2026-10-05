@@ -26,6 +26,11 @@
             <td>{{ $item->contoh }}</td>
             <td>
                 <a href="/japan/{{ $item->id }}/edit"><button>Edit</button></a>
+                <form action="/japan/{{ $item->id }}" method="POST" style="display: inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" onclick="return confirm('Apakah yakin?')">Hapus</button>
+                </form>
             </td>
         </tr>
         @endforeach
