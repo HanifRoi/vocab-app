@@ -9,7 +9,14 @@ class JapanController extends Controller
 {
     public function index(Request $request)
     {
-        $dataJapan = Japan::all();
+        $cari = $request->input('cari');
+        $dataJapan = Japan::when($cari, function($query) use ($cari)
+        {
+            return $query->where('hork', 'like', '%' . $cari . '%')
+                        ->orWhere('kanji', 'like', '%' . $cari . '%')
+                        ->orWhere('arti', 'like', '%' . $cari . '%')
+                        ->orWhere('contoh', 'like', '%' . $cari . '%');
+        })->paginate(1)->appends($request->all());
         return view('japan.index', compact('dataJapan'));
     }
 
