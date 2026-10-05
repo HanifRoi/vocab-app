@@ -82,7 +82,7 @@
 		<ul class="nav-links">
 			<li><a href="/">Dashboard</a></li>
 			<li><a href="/japan">Belajar Jepang</a></li>
-			<li><a href="/english">Belajar English</a></li>
+			<li><a href="/english">Belajar Inggris</a></li>
 		</ul>
 	</nav>
 
