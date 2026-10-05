@@ -14,4 +14,5 @@ Route::controller(JapanController::class)->group(function(){
     Route::post('/japan', 'store');
     Route::get('/japan/{id}/edit', 'edit');
     Route::put('/japan/{id}', 'update');
+    Route::delete('/japan/{id}', 'destroy');
 });
