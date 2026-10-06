@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('english', function (Blueprint $table) {
             $table->id();
             $table->text('english');
+            $table->text('pengucapan');
             $table->text('arti');
             $table->string('contoh');
             $table->timestamps();
