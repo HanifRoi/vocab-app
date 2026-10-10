@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EnglishController;
 use App\Http\Controllers\JapanController;
 use Illuminate\Database\Eloquent\Attributes\RouteKey;
 use Illuminate\Support\Facades\Route;
@@ -15,4 +16,8 @@ Route::controller(JapanController::class)->group(function(){
     Route::get('/japan/{id}/edit', 'edit');
     Route::put('/japan/{id}', 'update');
     Route::delete('/japan/{id}', 'destroy');
+});
+
+Route::controller(EnglishController::class)->group(function(){
+    Route::get('/english', 'index');
 });
