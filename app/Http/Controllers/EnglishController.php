@@ -12,4 +12,9 @@ class EnglishController extends Controller
         $dataEng = English::all();
         return view('english.index', compact('dataEng'));
     }
+
+    public function create()
+    {
+        return view('english.create');
+    }
 }
