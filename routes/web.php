@@ -21,4 +21,5 @@ Route::controller(JapanController::class)->group(function(){
 Route::controller(EnglishController::class)->group(function(){
     Route::get('/english', 'index');
     Route::get('/english', 'create');
+    Route::post('/english', 'store');
 });
