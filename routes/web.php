@@ -22,4 +22,6 @@ Route::controller(EnglishController::class)->group(function(){
     Route::get('/english', 'index');
     Route::get('/english/create', 'create');
     Route::post('/english', 'store');
+    Route::get('/english/{id}/edit', 'edit');
+    Route::put('/english/{id}', 'update');
 });
