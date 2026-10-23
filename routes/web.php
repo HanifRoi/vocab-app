@@ -24,4 +24,5 @@ Route::controller(EnglishController::class)->group(function(){
     Route::post('/english', 'store');
     Route::get('/english/{id}/edit', 'edit');
     Route::put('/english/{id}', 'update');
+    Route::delete('/english/{id}', 'destroy');
 });
