@@ -72,4 +72,12 @@ class EnglishController extends Controller
 
         return redirect('/english');
     }
+
+    public function destroy($id)
+    {
+        $data = English::findOrFail($id);
+        $data->delete();
+
+        return redirect('/english');
+    }
 }
