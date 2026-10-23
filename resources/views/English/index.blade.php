@@ -2,6 +2,7 @@
 @section('content')
 <title>Belajar Inggris</title>
 <h2>Data Vocab Inggris</h2>
+<a href="/english/create"><button>Tambah Data</button></a>
 <table border="1">
     <thead>
         <tr>
