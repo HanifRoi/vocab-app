@@ -11,12 +11,12 @@
         @method('PUT')
         <div>
             <label for="">English</label><br>
-            <input type="text" name="hork" value="{{ $data->english }}">
+            <input type="text" name="english" value="{{ $data->english }}">
         </div>
         <br>
         <div>
             <label for="">Pengucapan</label><br>
-            <input type="text" name="kanji" value="{{ $data->pengucapan }}">
+            <input type="text" name="pengucapan" value="{{ $data->pengucapan }}">
         </div>
         <br>
         <div>

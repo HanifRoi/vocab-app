@@ -11,6 +11,7 @@
             <th>Pengucapan</th>
             <th>Arti</th>
             <th>Contoh</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -21,6 +22,9 @@
                 <td>{{ $item->pengucapan }}</td>
                 <td>{{ $item->arti }}</td>
                 <td>{{ $item->contoh }}</td>
+                <td>
+                    <a href="/english/{{ $item->id }}/edit"><button>Edit</button></a>
+                </td>
             </tr>
         @endforeach
     </tbody>

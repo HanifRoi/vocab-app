@@ -70,6 +70,6 @@ class EnglishController extends Controller
 
         $data->save();
 
-        return redirect('/english')->with('sukses', 'Data berhasil ditambahkan');
+        return redirect('/english');
     }
 }
