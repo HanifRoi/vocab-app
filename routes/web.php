@@ -20,6 +20,6 @@ Route::controller(JapanController::class)->group(function(){
 
 Route::controller(EnglishController::class)->group(function(){
     Route::get('/english', 'index');
-    Route::get('/english', 'create');
+    Route::get('/english/create', 'create');
     Route::post('/english', 'store');
 });
