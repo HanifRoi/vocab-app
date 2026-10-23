@@ -24,6 +24,11 @@
                 <td>{{ $item->contoh }}</td>
                 <td>
                     <a href="/english/{{ $item->id }}/edit"><button>Edit</button></a>
+                    <form action="/english{{ $item->id }}" style="display: inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Hapus</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
